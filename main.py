@@ -14,7 +14,7 @@ UPDATES_URL = "https://api.transport.nsw.gov.au/v1/gtfs/realtime/nswtrains"
 HEADERS = {"Authorization": f"apikey {API_K}", "Accept": "application/x-google-protobuf"}
 
 
-target_set = "XP2013"
+target_set = "XP2009"
 target_route = "4T.T.ST21"
 
 
