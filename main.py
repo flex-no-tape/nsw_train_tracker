@@ -1,3 +1,4 @@
+import os
 import requests
 from google.transit import gtfs_realtime_pb2
 import discord
@@ -7,6 +8,10 @@ import asyncio
 POSITIONS_URL = "https://api.transport.nsw.gov.au/v1/gtfs/vehiclepos/nswtrains"
 UPDATES_URL = "https://api.transport.nsw.gov.au/v1/gtfs/realtime/nswtrains"
 HEADERS = {"Authorization": f"apikey {API_KEY}", "Accept": "application/x-google-protobuf"}
+
+API_KEY = os.getenv("API_KEY")
+TOKEN = os.getenv("DISCORD_TOKEN")
+MY_USER_ID = int(os.getenv("DISCORD_USER_ID"))
 
 target_set = "XP2013"
 target_route = "4T.T.ST21"
