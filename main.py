@@ -3,6 +3,7 @@ import requests
 from google.transit import gtfs_realtime_pb2
 import discord
 import asyncio
+from datetime import datetime
 
 API_K = os.getenv("API_KEY")
 TOKEN = os.getenv("DISCORD_TOKEN")
@@ -51,6 +52,9 @@ def main():
 
         # 2. Get Trip Updates (Delays)
         upd_feed = get_feed(UPDATES_URL)
+
+        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(now)
 
         print(f"{'SET ID':<10} | {'ROUTE':<12} | {'STATUS/DELAY'}")
         print("-" * 45)
