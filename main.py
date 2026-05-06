@@ -16,6 +16,7 @@ HEADERS = {"Authorization": f"apikey {API_K}", "Accept": "application/x-google-p
 
 
 target_set = "XP2009"
+target_set2 = "XP2006"
 target_route = "4T.T.ST21"
 target_route2 = "4T.T.ST23"
 
@@ -84,6 +85,20 @@ def main():
                     asyncio.run(send_discord_dm(msg))
                 
                 if physical_set == target_set and route.strip() == target_route2:
+                    print(f"ROUTE IS RUNNING WITH {physical_set}")
+                    msg = f"ALERT: {physical_set} found on {route}!"
+                    print(msg)
+                    # Trigger the DM
+                    asyncio.run(send_discord_dm(msg))
+
+                if physical_set == target_set2 and route.strip() == target_route:
+                    print(f"ROUTE IS RUNNING WITH {physical_set}")
+                    msg = f"ALERT: {physical_set} found on {route}!"
+                    print(msg)
+                    # Trigger the DM
+                    asyncio.run(send_discord_dm(msg))
+                
+                if physical_set == target_set2 and route.strip() == target_route2:
                     print(f"ROUTE IS RUNNING WITH {physical_set}")
                     msg = f"ALERT: {physical_set} found on {route}!"
                     print(msg)
