@@ -84,25 +84,29 @@ def main():
                     # Trigger the DM
                     asyncio.run(send_discord_dm(msg))
                 
-                if physical_set == target_set and route.strip() == target_route2:
+                elif physical_set == target_set and route.strip() == target_route2:
                     print(f"ROUTE IS RUNNING WITH {physical_set}")
                     msg = f"ALERT: {physical_set} found on {route}!"
                     print(msg)
                     # Trigger the DM
                     asyncio.run(send_discord_dm(msg))
 
-                if physical_set == target_set2 and route.strip() == target_route:
+                elif physical_set == target_set2 and route.strip() == target_route:
                     print(f"ROUTE IS RUNNING WITH {physical_set}")
                     msg = f"ALERT: {physical_set} found on {route}!"
                     print(msg)
                     # Trigger the DM
                     asyncio.run(send_discord_dm(msg))
                 
-                if physical_set == target_set2 and route.strip() == target_route2:
+                elif physical_set == target_set2 and route.strip() == target_route2:
                     print(f"ROUTE IS RUNNING WITH {physical_set}")
                     msg = f"ALERT: {physical_set} found on {route}!"
                     print(msg)
                     # Trigger the DM
+                    asyncio.run(send_discord_dm(msg))
+                
+                else:
+                    msg = f"No train sets found"
                     asyncio.run(send_discord_dm(msg))
 
 
