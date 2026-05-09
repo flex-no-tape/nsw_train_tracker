@@ -105,9 +105,6 @@ def main():
                     # Trigger the DM
                     asyncio.run(send_discord_dm(msg))
                 
-                else:
-                    msg = f"No train sets found"
-                    asyncio.run(send_discord_dm(msg))
 
 
 
